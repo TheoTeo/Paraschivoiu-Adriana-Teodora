@@ -11,8 +11,13 @@ public class AngajatiReader implements ReaderAplicants {
     public List<Aplicant> citireAplicanti(String numeFisier) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(numeFisier));
         scanner.useDelimiter(",");
-        List<Aplicant> angajati = new ArrayList<Aplicant>();
+        List<Aplicant> angajati = citireAplicantiDinScanner(scanner);
+        scanner.close();
+        return angajati;
+    }
 
+    private List<Aplicant> citireAplicantiDinScanner(Scanner scanner){
+        List<Aplicant> angajati = new ArrayList<Aplicant>();
         while (scanner.hasNext()) {
             Angajat a1=new Angajat();
             AplicantReader.citireAplicant(scanner,a1);
@@ -22,9 +27,6 @@ public class AngajatiReader implements ReaderAplicants {
             a1.setOcupatie(ocupatie);
             angajati.add(a1);
         }
-        scanner.close();
         return angajati;
     }
-
-
 }
