@@ -3,6 +3,7 @@ package Composite.program;
 
 import Composite.clase.Autobuz;
 import Composite.clase.Flota;
+import Composite.clase.Nod;
 import com.sun.security.jgss.GSSUtil;
 
 import javax.management.remote.rmi.RMIJRMPServerImpl;
@@ -15,7 +16,7 @@ public class Main {
         Autobuz a4=new Autobuz("BMW","E445",40);
         Autobuz a5=new Autobuz("BMW","E445",80);
 
-        Flota mari=new Flota("Autobuze mari");
+        Nod mari=new Flota("Autobuze mari");
         Flota mijlocii=new Flota("Autobuze mijlocii");
         Flota mici=new Flota("Autobuze mici");
         Flota flota=new Flota("Flota mama");
