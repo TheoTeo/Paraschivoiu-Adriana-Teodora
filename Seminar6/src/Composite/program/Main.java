@@ -33,6 +33,9 @@ public class Main {
 
             System.out.println("Garantie pt intreaga flota:" +flota.calculeazaSumagarantie(15)+" lei");
             System.out.println("Garantie pt flota mijlocie:" +mijlocii.calculeazaSumagarantie(15)+" lei");
+            flota.afiseazaDescriere();
+
+
         }
         catch (Exception e){
             e.printStackTrace();
